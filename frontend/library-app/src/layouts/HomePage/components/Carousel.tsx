@@ -1,6 +1,5 @@
 import { ReturnBook } from "./ReturnBook";
 import { useEffect, useState } from "react";
-// import { Link } from "react-router-dom";
 import BookModel from "../../../model/BookModel";
 import { SpinnerLoading } from "../../../utils/SpinnerLoading";
 import { Link } from "react-router-dom";
@@ -13,7 +12,7 @@ export const Carousel = () => {
 
     useEffect(() => {
         const fetchBooks = async () => {
-            const baseUrl: string = "http://localhost:8080/api/books";
+            const baseUrl: string = `${process.env.REACT_APP_API}/books`;
 
             const url: string = `${baseUrl}?page=0&size=9`;
 

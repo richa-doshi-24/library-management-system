@@ -17,7 +17,7 @@ export const Review: React.FC<{ review: ReviewModel }> = (props) => {
                 <h5>{props.review.userEmail}</h5>
                 <div className='row'>
                     <div className='col'>
-                        {dateRender}
+                          
                     </div>
                     <div className='col'>
                         <StarsReview rating={props.review.rating} size={16} />

@@ -1,5 +1,5 @@
-// import { Link } from "react-router-dom";
-import BookModel from "../../model/BookModel";
+import { Link } from "react-router-dom";
+import BookModel from "../../../model/BookModel";
 
 export const SearchBook: React.FC<{ book: BookModel }> = (props) => {
     return (
@@ -14,7 +14,7 @@ export const SearchBook: React.FC<{ book: BookModel }> = (props) => {
                                 alt='Book'
                             />
                             :
-                            <img src={require('../../../src/Images/BooksImages/new-book-3.png')}
+                            <img src={require('../../../Images/BooksImages/new-book-3.png')}
                                 width='123'
                                 height='196'
                                 alt='Book'
@@ -30,7 +30,7 @@ export const SearchBook: React.FC<{ book: BookModel }> = (props) => {
                                 alt='Book'
                             />
                             :
-                            <img src={require('../../../src/Images/BooksImages/new-book-3.png')}
+                            <img src={require('../../../Images/BooksImages/new-book-3.png')}
                                 width='123'
                                 height='196'
                                 alt='Book'
@@ -52,9 +52,9 @@ export const SearchBook: React.FC<{ book: BookModel }> = (props) => {
                     </div>
                 </div>
                 <div className='col-md-4 d-flex justify-content-center align-items-center'>
-                    <a className='btn btn-md main-color text-white' href="#">
+                    <Link className='btn btn-md main-color text-white' to={`/checkout/${props.book.id}`}>
                         View Details
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>

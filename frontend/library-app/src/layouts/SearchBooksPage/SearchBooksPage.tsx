@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import BookModel from '../model/BookModel';
-import { Pagination } from '../utils/Pagination';
-import { SpinnerLoading } from '../utils/SpinnerLoading';
+import BookModel from '../../model/BookModel';
+import { Pagination } from '../../utils/Pagination';
+import { SpinnerLoading } from '../../utils/SpinnerLoading';
 import { SearchBook } from './components/SearchBook';
 
 export const SearchBooksPage = () => {
@@ -19,7 +19,7 @@ export const SearchBooksPage = () => {
 
     useEffect(() => {
         const fetchBooks = async () => {
-            const baseUrl: string = "http://localhost:8080/api/books";
+            const baseUrl: string = `${process.env.REACT_APP_API}/books`;
 
             let url: string = '';
 
